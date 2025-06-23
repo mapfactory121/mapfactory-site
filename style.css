@@ -1,156 +1,94 @@
-:root {
-  --bg: #121212;
-  --surface: #232323;
-  --text: #e0e0e0;
-  --accent: #00bcd4;
-  --border: #333;
-  --font-en: 'Montserrat', sans-serif;
-  --font-ar: 'Cairo', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-en), var(--font-ar);
-  margin: 0;
-  min-height: 100vh;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: 'Poppins', 'Cairo', sans-serif;
+  overflow-x: hidden;
 }
 
 header {
-  background: var(--surface);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--border);
-}
-
-header h1 {
-  font-family: var(--font-en);
-  font-size: 2rem;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-nav button, nav a {
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-  padding: 0.7em 1.5em;
-  margin-left: 1em;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: inherit;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-nav button:hover, nav a:hover {
-  background: #0097a7;
-}
-
-.hero {
   text-align: center;
-  margin: 3rem 0 2rem 0;
-}
-.hero h2 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  color: #b0b0b0;
+  padding: 40px 20px;
+  animation: fadeIn 1.5s ease-out;
 }
 
-.reviews {
-  background: var(--surface);
-  margin: 2rem auto;
-  padding: 2rem;
+header img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: rotateIn 2s ease-out;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p.tagline {
+  font-size: 1.2em;
+  color: #bbbbbb;
+}
+
+nav {
+  margin-top: 30px;
+}
+
+nav button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 12px 24px;
+  margin: 10px;
+  cursor: pointer;
   border-radius: 12px;
-  max-width: 700px;
-  box-shadow: 0 2px 12px #0004;
+  transition: background 0.3s, transform 0.2s;
+}
+
+nav button:hover {
+  background: #1a1a1a;
+  transform: scale(1.05);
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  animation: slideUp 1.2s ease-out;
+}
+
+.hero p {
+  font-size: 1.1em;
+  color: #ccc;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  font-size: 0.95rem;
-  color: #aaa;
+  padding: 30px;
+  font-size: 14px;
+  color: #999;
 }
 
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
-  justify-content: center;
-  align-items: center;
-}
-.modal-content {
-  background: var(--surface);
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 400px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 4px 32px #0008;
-}
-.close {
-  position: absolute;
-  top: 1rem; right: 1rem;
-  font-size: 1.5rem;
-  color: var(--accent);
-  cursor: pointer;
-}
-.modal-content h2 {
-  margin-top: 0;
-}
-#orderForm label {
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
-}
-#orderForm input {
-  width: 100%;
-  padding: 0.7em;
-  border-radius: 5px;
-  border: 1px solid var(--border);
-  background: #181818;
-  color: var(--text);
-  font-size: 1rem;
-}
-#orderForm button {
-  margin-top: 1.5rem;
-  width: 100%;
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-  padding: 0.8em;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-#orderForm button:hover {
-  background: #0097a7;
-}
-#formMsg {
-  margin-top: 1rem;
-  color: #00e676;
-  text-align: center;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  header, .reviews, .modal-content {
-    padding: 1rem;
-  }
-  .hero h2 {
-    font-size: 1.3rem;
-  }
+@keyframes rotateIn {
+  from { transform: rotate(-360deg); opacity: 0; }
+  to { transform: rotate(0deg); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
