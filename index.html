@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<الرأس>
+    <meta charset="UTF-8">
+    <title>متجر خرائط روبلوكس</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<الجسم>
+    <الرأس>
+        <button id="langToggle" class="lang-btn">العربية</button>
+        <h1 id="mainTitle">متجر خرائط روبلوكس</h1>
+        <p id="mainDesc">أفضل الخرائط الحصرية لـ Roblox!</p>
+    </header>
+    <الرئيسية>
+        <section class="map-idea">
+            <h2 id="mapIdeaTitle">فكرة الخريطة</h2>
+            <p id="mapIdeaDesc">
+                نقدم لك خريطة "مدينة الأحلام"، حيث يمكنك استكشاف مدينة ضخمة مليئة بالمغامرات والتحديات، بتصميم احترافي وتجربة لعب فريدة من نوعها!
+            </ص>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="صورة الخريطة" />
+        </القسم>
+        <section class="contact">
+            <h2 id="contactTitle">اتصل بنا للشراء أو الاستفسار</h2>
+            <form id="contactForm" action="https://formspree.io/f/your_form_id" method="POST">
+                <label for="name" id="nameLabel">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email" id="emailLabel">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message" id="messageLabel">رسالتك:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" id="submitBtn">إرسال</button>
+            </form>
+            <div id="formStatus"></div>
+        </القسم>
+    </main>
+    <footer id="footerText">
+        متجر خرائط روبلوكس 2025
+    </تذييل>
+    <script src="script.js"></script>
+</body>
+</html>
