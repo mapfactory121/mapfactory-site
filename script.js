@@ -5,11 +5,11 @@ function playSound() {
   sound.play();
 }
 
-// Smooth scroll and play sound
+// Smooth scroll to section
 function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) {
     el.scrollIntoView({ behavior: 'smooth' });
-    playSound(); // صوت عند التنقل
+    playSound();
   }
 }
