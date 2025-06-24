@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MapFactory - طلب خريطة</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MapFactory - Build Your Dream World</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS & reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <img src="logo-transparent.png" alt="MapFactory Logo" class="logo" />
-    <h1 data-en="MapFactory - Order Your Map" data-ar="ماب فاكتوري - اطلب خريطتك">ماب فاكتوري - اطلب خريطتك</h1>
-    <button class="btn" onclick="toggleLanguage()" data-en="Switch Language" data-ar="تبديل اللغة">تبديل اللغة</button>
+    <img src="logo-transparent.png" alt="MapFactory Logo" class="logo">
+    <h1 id="main-title" data-en="MapFactory - Order Your Map" data-ar="ماب فاكتوري - اطلب خريطتك">MapFactory - Order Your Map</h1>
+    <p class="tagline" data-en="Build Your Dream World in Roblox" data-ar="اصنع عالمك في روبلوكس">Build Your Dream World in Roblox</p>
+    <button class="btn" onclick="toggleLanguage()" data-en="Switch Language" data-ar="تبديل اللغة">Switch Language</button>
+    <nav>
+      <button onclick="scrollToSection('home')">Home</button>
+      <button onclick="scrollToSection('order')">Order Map</button>
+      <button onclick="scrollToSection('contact')">Contact</button>
+      <button onclick="scrollToSection('reviews')">Reviews</button>
+    </nav>
   </header>
 
-  <main class="container">
-    <h2 data-en="Order a Custom Roblox Map" data-ar="اطلب خريطة روبلوكس مخصصة">اطلب خريطة روبلوكس مخصصة</h2>
+  <section id="home" class="hero">
+    <h2 data-en="Your imagination, our creation." data-ar="خيالك، تنفيذنا.">Your imagination, our creation.</h2>
+    <p data-en="We build immersive Roblox maps with care, quality, and creativity." data-ar="نحن نصنع خرائط روبلوكس غامرة بعناية وجودة وإبداع.">We build immersive Roblox maps with care, quality, and creativity.</p>
+    <div style="height: 300px;"></div>
+  </section>
+
+  <section id="order" class="form-section">
+    <h2 data-en="🛠️ Order a Custom Map" data-ar="🛠️ اطلب خريطة مخصصة">🛠️ Order a Custom Map</h2>
     <form action="https://formsubmit.co/mapfactory363@gmail.com" method="POST" onsubmit="playSound()">
-      <input type="hidden" name="_next" value="/" />
-      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="/thanks.html">
+      <input type="hidden" name="_captcha" value="false">
 
-      <div class="form-group">
-        <label data-en="Full Name" data-ar="الاسم الكامل">الاسم الكامل</label>
-        <input type="text" name="name" class="form-control" required />
-      </div>
+      <label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+      <input type="text" name="name" required>
 
-      <div class="form-group">
-        <label data-en="Email Address" data-ar="البريد الإلكتروني">البريد الإلكتروني</label>
-        <input type="email" name="email" class="form-control" required />
-      </div>
+      <label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+      <input type="email" name="email" required>
 
-      <div class="form-group">
-        <label data-en="Map Description" data-ar="وصف الخريطة">وصف الخريطة</label>
-        <textarea name="message" class="form-control" rows="8" required></textarea>
-      </div>
+      <label data-en="Map Type / Description" data-ar="نوع / وصف الخريطة">Map Type / Description</label>
+      <textarea name="details" rows="6" required></textarea>
 
       <div class="g-recaptcha" data-sitekey="6LfEaGsrAAAAAETwnnqIup2LWijrdhxCrlTpaRx2"></div>
 
-      <button type="submit" class="btn" data-en="Send Request" data-ar="إرسال الطلب">إرسال الطلب</button>
+      <button type="submit" class="btn" data-en="Submit Order" data-ar="إرسال الطلب">Submit Order</button>
     </form>
-  </main>
+    <div style="height: 200px;"></div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2 data-en="📬 Contact Us" data-ar="📬 تواصل معنا">📬 Contact Us</h2>
+    <p>Email: <a href="mailto:mapfactory363@gmail.com">mapfactory363@gmail.com</a></p>
+    <div style="height: 100px;"></div>
+  </section>
+
+  <section id="reviews" class="reviews-section">
+    <h2 data-en="🌟 Reviews" data-ar="🌟 التقييمات">🌟 Reviews</h2>
+    <p>⭐⭐⭐⭐⭐ – “Great service, amazing maps!”</p>
+    <p>⭐⭐⭐⭐ – “Quick delivery and friendly!”</p>
+    <p>⭐⭐⭐⭐⭐ – “Loved it! Will order again.”</p>
+    <div style="height: 100px;"></div>
+  </section>
 
   <footer>
     <p>&copy; 2025 MapFactory. All rights reserved.</p>
