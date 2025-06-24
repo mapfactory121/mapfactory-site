@@ -21,16 +21,47 @@
     <h1>MapFactory</h1>
     <p class="tagline">Build Your Dream World in Roblox</p>
     <nav>
-      <button onmouseover="playSound()">Home</button>
-      <button onmouseover="playSound()">Order Map</button>
-      <button onmouseover="playSound()">Contact</button>
-      <button onmouseover="playSound()">Reviews</button>
+      <button onclick="scrollToSection('home')">Home</button>
+      <button onclick="scrollToSection('order')">Order Map</button>
+      <button onclick="scrollToSection('contact')">Contact</button>
+      <button onclick="scrollToSection('reviews')">Reviews</button>
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="home" class="hero">
     <h2>Your imagination, our creation.</h2>
     <p>We build immersive Roblox maps with care, quality, and creativity.</p>
+  </section>
+
+  <section id="order" class="form-section">
+    <h2>🛠️ Order a Custom Map</h2>
+    <form action="https://formsubmit.co/mapfactory363@gmail.com" method="POST">
+      <label>Map Type:</label>
+      <input type="text" name="map_type" required />
+
+      <label>Details:</label>
+      <textarea name="details" required></textarea>
+
+      <label>Your Email:</label>
+      <input type="email" name="email" required />
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://mapfactory121.github.io/mapfactory-site/thanks.html">
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>📬 Contact Us</h2>
+    <p>Email us anytime at <a href="mailto:mapfactory363@gmail.com">mapfactory363@gmail.com</a></p>
+  </section>
+
+  <section id="reviews" class="reviews-section">
+    <h2>🌟 Reviews</h2>
+    <p>⭐⭐⭐⭐⭐ – “Great service, amazing maps!”</p>
+    <p>⭐⭐⭐⭐ – “Quick delivery and friendly!”</p>
+    <p>⭐⭐⭐⭐⭐ – “Loved it! Will order again.”</p>
   </section>
 
   <footer>
