@@ -1,32 +1,33 @@
 // Scroll to section
 function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Language toggle
 function toggleLanguage() {
-  const allElements = document.querySelectorAll('[data-en]');
-  const currentLang = document.documentElement.lang;
-  const newLang = currentLang === 'ar' ? 'en' : 'ar';
-  document.documentElement.lang = newLang;
-  document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+  const elements = document.querySelectorAll('[data-en]');
+  const isEnglish = document.documentElement.lang === 'en';
+  document.documentElement.lang = isEnglish ? 'ar' : 'en';
+  document.body.dir = isEnglish ? 'rtl' : 'ltr';
 
-  allElements.forEach(el => {
-    el.textContent = el.getAttribute(`data-${newLang}`);
+  elements.forEach(el => {
+    const newText = isEnglish ? el.dataset.ar : el.dataset.en;
+    if (newText) el.textContent = newText;
   });
 }
 
-// Sound effect on submit
+// Play sound on form submit
 function playSound() {
-  const audio = new Audio('https://cdn.pixabay.com/download/audio/2022/03/15/audio_252650ec04.mp3?filename=click-124467.mp3');
+  const audio = new Audio('https://cdn.pixabay.com/audio/2022/03/15/audio_49b55c5ba7.mp3');
+  audio.volume = 0.5;
   audio.play();
 }
 
-// Optional visual effect
-window.addEventListener('load', () => {
-  document.body.style.opacity = 0;
-  setTimeout(() => {
-    document.body.style.transition = 'opacity 1s';
-    document.body.style.opacity = 1;
-  }, 100);
+// Optional: smooth fade-in animation
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('button, h2, p, a, input, textarea').forEach(el => {
+    el.style.opacity = 0;
+    el.style.transition = 'opacity 1s ease';
+    setTimeout(() => el.style.opacity = 1, 100);
+  });
 });
