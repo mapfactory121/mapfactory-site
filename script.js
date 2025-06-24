@@ -4,3 +4,12 @@ function playSound() {
   sound.volume = 0.3;
   sound.play();
 }
+
+// Smooth scroll and play sound
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+    playSound(); // صوت عند التنقل
+  }
+}
