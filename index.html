@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MapFactory - Build Your Dream World in Roblox</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- External CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- External JS -->
+  <!-- JS -->
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -20,10 +20,10 @@
     <h1 data-en="MapFactory - Order Your Map" data-ar="ماب فاكتوري - اطلب خريطتك">MapFactory - Order Your Map</h1>
     <button class="btn lang-toggle" onclick="toggleLanguage()" data-en="Switch Language" data-ar="تبديل اللغة">Switch Language</button>
     <nav>
-      <button onclick="scrollToSection('home')">Home</button>
-      <button onclick="scrollToSection('order')">Order Map</button>
-      <button onclick="scrollToSection('contact')">Contact</button>
-      <button onclick="scrollToSection('reviews')">Reviews</button>
+      <button class="nav-btn" onclick="scrollToSection('home')">Home</button>
+      <button class="nav-btn" onclick="scrollToSection('order')">Order Map</button>
+      <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+      <button class="nav-btn" onclick="scrollToSection('reviews')">Reviews</button>
     </nav>
   </header>
 
@@ -35,17 +35,17 @@
   <section id="order" class="form-section">
     <h2 data-en="🛠️ Order a Custom Map" data-ar="🛠️ اطلب خريطة مخصصة">🛠️ Order a Custom Map</h2>
     <form action="https://formsubmit.co/mapfactory363@gmail.com" method="POST" onsubmit="playSound()">
-      <input type="hidden" name="_next" value="https://mapfactory121.github.io/mapfactory-site/thanks.html" />
-      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://mapfactory121.github.io/mapfactory-site/thanks.html">
+      <input type="hidden" name="_captcha" value="false">
 
       <div class="form-group">
         <label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
-        <input type="text" name="name" required />
+        <input type="text" name="name" required>
       </div>
 
       <div class="form-group">
         <label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
-        <input type="email" name="email" required />
+        <input type="email" name="email" required>
       </div>
 
       <div class="form-group">
@@ -53,7 +53,7 @@
         <textarea name="message" rows="6" required></textarea>
       </div>
 
-      <button type="submit" class="btn" data-en="Send Request" data-ar="إرسال الطلب">Send Request</button>
+      <button type="submit" class="btn submit-btn" data-en="Send Request" data-ar="إرسال الطلب">Send Request</button>
     </form>
   </section>
 
