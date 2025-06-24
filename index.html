@@ -1,74 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MapFactory – Custom Roblox Maps</title>
-  <!-- Google Fonts: English & Arabic -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MapFactory - Build Your Dream World in Roblox</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External JS -->
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
+    <img src="logo-transparent.png" alt="MapFactory Logo">
     <h1>MapFactory</h1>
+    <p class="tagline">Build Your Dream World in Roblox</p>
     <nav>
-      <button id="orderBtn">Order Map</button>
-      <a href="mailto:mapfactory363@gmail.com" id="contactBtn">Contact</a>
+      <button onmouseover="playSound()">Home</button>
+      <button onmouseover="playSound()">Order Map</button>
+      <button onmouseover="playSound()">Contact</button>
+      <button onmouseover="playSound()">Reviews</button>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>High-Quality Custom Roblox Maps</h2>
-      <p>Order unique maps for your Roblox games. Fast, professional, and tailored to your needs.</p>
-    </section>
-
-    <section class="reviews">
-      <h3>Reviews & Public Comments</h3>
-      <!-- Giscus comments widget -->
-      <div id="comments"></div>
-    </section>
-  </main>
-
-  <!-- Order Map Modal -->
-  <div id="orderModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <h2>Order a Custom Map</h2>
-      <form id="orderForm" action="https://formspree.io/f/yourFormID" method="POST">
-        <label for="email">Your Email</label>
-        <input type="email" name="email" id="email" required placeholder="you@example.com">
-
-        <label for="mapType">Map Type / Description</label>
-        <input type="text" name="mapType" id="mapType" required placeholder="Describe your map">
-
-        <button type="submit">Send Request</button>
-      </form>
-      <div id="formMsg"></div>
-    </div>
-  </div>
+  <section class="hero">
+    <h2>Your imagination, our creation.</h2>
+    <p>We build immersive Roblox maps with care, quality, and creativity.</p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 MapFactory. All rights reserved.</p>
+    <p>© 2025 MapFactory. All rights reserved.</p>
   </footer>
-
-  <!-- Giscus Comments Script -->
-  <script src="https://giscus.app/client.js"
-    data-repo="YOUR_GITHUB_USERNAME/YOUR_REPO"
-    data-repo-id="YOUR_REPO_ID"
-    data-category="General"
-    data-category-id="YOUR_CATEGORY_ID"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="dark"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-  </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
