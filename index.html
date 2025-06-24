@@ -34,8 +34,8 @@
 
   <section id="order" class="form-section">
     <h2 data-en="🛠️ Order a Custom Map" data-ar="🛠️ اطلب خريطة مخصصة">🛠️ Order a Custom Map</h2>
-    <form action="https://formsubmit.co/mapfactory363@gmail.com" method="POST" onsubmit="playSound()">
-      <input type="hidden" name="_next" value="https://mapfactory121.github.io/mapfactory-site/thanks.html">
+    <p class="payment-info" data-en="Payment is done through Robux – simple and accessible prices for everyone!" data-ar="الدفع يتم عبر روبوكس - بأسعار بسيطة ومناسبة للجميع!">Payment is done through Robux – simple and accessible prices for everyone!</p>
+    <form id="orderForm" method="POST" onsubmit="return handleSubmit(event)">
       <input type="hidden" name="_captcha" value="false">
 
       <div class="form-group">
@@ -73,5 +73,19 @@
   <footer>
     <p>© 2025 MapFactory. All rights reserved.</p>
   </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      playSound();
+      const lang = document.documentElement.lang;
+      const form = document.getElementById('orderForm');
+      form.action = lang === 'ar'
+        ? 'https://mapfactory121.github.io/mapfactory-site/thanks-ar.html'
+        : 'https://mapfactory121.github.io/mapfactory-site/thanks.html';
+      form.submit();
+      return false;
+    }
+  </script>
 </body>
 </html>
