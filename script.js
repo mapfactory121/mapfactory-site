@@ -1,15 +1,17 @@
-// Play sound on submit or interaction
+// script.js
+
+// تشغيل صوت عند الضغط
 function playSound() {
   const sound = new Audio("https://cdn.pixabay.com/download/audio/2023/03/23/audio_6c01fe75ba.mp3?filename=ui-click-136746.mp3");
   sound.volume = 0.4;
   sound.play();
 }
 
-// Toggle language between English and Arabic
+// تبديل اللغة بين العربية والإنجليزية
 function toggleLanguage() {
   const elements = document.querySelectorAll('[data-en]');
-  const currentLang = document.documentElement.lang || 'en';
-  const newLang = currentLang === 'en' ? 'ar' : 'en';
+  const currentLang = document.documentElement.lang || 'ar';
+  const newLang = currentLang === 'ar' ? 'en' : 'ar';
 
   document.documentElement.lang = newLang;
   document.body.dir = newLang === 'ar' ? 'rtl' : 'ltr';
@@ -20,4 +22,10 @@ function toggleLanguage() {
   });
 
   playSound();
+}
+
+// تشغيل تلقائي للصوت عند إرسال النموذج
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", playSound);
 }
