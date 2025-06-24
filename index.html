@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MapFactory - Order Your Map</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MapFactory - طلب خريطة</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <img src="logo-transparent.png" alt="MapFactory Logo" class="logo">
+    <img src="logo-transparent.png" alt="MapFactory Logo" class="logo" />
     <h1 data-en="MapFactory - Order Your Map" data-ar="ماب فاكتوري - اطلب خريطتك">ماب فاكتوري - اطلب خريطتك</h1>
     <button class="btn" onclick="toggleLanguage()" data-en="Switch Language" data-ar="تبديل اللغة">تبديل اللغة</button>
   </header>
 
-  <div class="container">
-    <h2 data-en="Order a Custom Roblox Map" data-ar="اطلب خريطة مخصصة للروبلكس">اطلب خريطة مخصصة للروبلكس</h2>
+  <main class="container">
+    <h2 data-en="Order a Custom Roblox Map" data-ar="اطلب خريطة روبلوكس مخصصة">اطلب خريطة روبلوكس مخصصة</h2>
     <form action="https://formsubmit.co/mapfactory363@gmail.com" method="POST" onsubmit="playSound()">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="thanks.html">
+      <input type="hidden" name="_next" value="/" />
+      <input type="hidden" name="_captcha" value="false" />
 
       <div class="form-group">
-        <label data-en="Full Name" data-ar="اسمك الكامل">اسمك الكامل</label>
-        <input type="text" name="name" class="form-control" required>
+        <label data-en="Full Name" data-ar="الاسم الكامل">الاسم الكامل</label>
+        <input type="text" name="name" class="form-control" required />
       </div>
 
       <div class="form-group">
         <label data-en="Email Address" data-ar="البريد الإلكتروني">البريد الإلكتروني</label>
-        <input type="email" name="email" class="form-control" required>
+        <input type="email" name="email" class="form-control" required />
       </div>
 
       <div class="form-group">
-        <label data-en="Map Details" data-ar="تفاصيل الخريطة">تفاصيل الخريطة</label>
+        <label data-en="Map Description" data-ar="وصف الخريطة">وصف الخريطة</label>
         <textarea name="message" class="form-control" rows="8" required></textarea>
       </div>
 
-      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+      <div class="g-recaptcha" data-sitekey="6LfEaGsrAAAAAETwnnqIup2LWijrdhxCrlTpaRx2"></div>
 
-      <button type="submit" class="btn" data-en="Submit" data-ar="إرسال الطلب">إرسال الطلب</button>
+      <button type="submit" class="btn" data-en="Send Request" data-ar="إرسال الطلب">إرسال الطلب</button>
     </form>
-  </div>
+  </main>
 
   <footer>
     <p>&copy; 2025 MapFactory. All rights reserved.</p>
